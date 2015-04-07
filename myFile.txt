@@ -1,0 +1,6 @@
+From time to time, you may notice that these two commit views show different information. That is, the history for a single file may omit commits found on the repository's commit history.
+
+In essence, Git has several different ways of showing the history of a repository. When Git shows the history of a single file, it "simplifies" history by omitting commits that did not change the file. But rather than look at every commit to decide whether it touched the file, git will omit a whole branch if that branch, when merged, did not impact the final contents of the file. Any commits on that branch that touched the file will not be shown.
+
+For a file's commit history, GitHub explicitly follows this simple strategy, for two reasons:
+
